@@ -62,8 +62,8 @@ public class MessagerieController {
             messagerieService.ajouterMessage(idsender,
             newMessage.getIdReceiver(),
             newMessage.getContenu(), newMessage.getDateMessage());
-            // System.out.println(firebasePublisherService.postToClient(newMessage.getContenu(),
-            //         firebasePublisherService.getDevicesOfClient(newMessage.getIdReceiver()).getToken()));
+            System.out.println(firebasePublisherService.postToClient(newMessage.getContenu(),
+                    firebasePublisherService.getDevicesOfClient(newMessage.getIdReceiver()).getToken()));
             return ResponseEntity.ok("Created");
         } catch (Exception e) {
             e.printStackTrace();
