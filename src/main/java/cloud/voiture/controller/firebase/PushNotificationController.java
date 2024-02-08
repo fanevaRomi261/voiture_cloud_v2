@@ -17,6 +17,7 @@ import cloud.voiture.service.firebase.TokenService;
 import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PushNotificationController {
     @Autowired
     AnnonceService annonceService;
