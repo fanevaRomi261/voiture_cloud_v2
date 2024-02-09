@@ -65,6 +65,7 @@ public class LoginController {
             // user.setRole(role);
             // System.out.println(user.getId());
             String token = jwtUtil.createToken(user);
+            user.setMdp(null);
             LoginRes loginRes = new LoginRes(email, token, user);
 
             return ResponseEntity.ok(loginRes);
